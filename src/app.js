@@ -56,7 +56,7 @@ app.use((err, req, res, next) => {
 
 // ===== START SERVER =====
 const PORT = process.env.PORT || 8080
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Driving School API đang chạy tại http://localhost:${PORT}`)
   console.log(` Health check: http://localhost:${PORT}/api/health`)
   console.log(``)
