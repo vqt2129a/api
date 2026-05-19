@@ -100,9 +100,26 @@ async function main() {
   console.log(' System settings:', settings.length, 'items')
   // 5. Bảng News (Tin tức)
   const newsArticles = [
+    { title: 'Hướng dẫn đăng ký thi bằng lái xe B2 online', sapo: 'Hướng dẫn chi tiết cách đăng ký thi bằng lái xe B2 trực tuyến.', content: '<p>Hướng dẫn đăng ký thi bằng lái xe B2 online nhanh chóng.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: '10 mẹo thi lý thuyết lái xe đạt điểm cao', sapo: 'Tổng hợp 10 mẹo giúp vượt qua bài thi lý thuyết dễ dàng.', content: '<p>10 mẹo thi lý thuyết lái xe đạt điểm cao.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Kinh nghiệm thi sa hình B2 đậu ngay lần đầu', sapo: 'Chia sẻ kinh nghiệm từ các học viên đã thi đậu sa hình B2 lần đầu.', content: '<p>Kinh nghiệm thi sa hình B2.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Thay đổi mới trong luật giao thông 2026', sapo: 'Cập nhật các thay đổi quan trọng trong luật giao thông năm 2026.', content: '<p>Thay đổi mới luật giao thông 2026.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'So sánh bằng lái B1 và B2: Nên học hạng nào?', sapo: 'Phân tích ưu nhược điểm giữa B1 và B2.', content: '<p>So sánh B1 và B2.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Chi phí học lái xe B2 năm 2026 là bao nhiêu?', sapo: 'Tổng hợp chi phí học lái xe B2 từ A đến Z.', content: '<p>Chi phí học lái xe B2 năm 2026.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Quy trình đổi bằng lái xe quốc tế', sapo: 'Hướng dẫn quy trình đổi bằng lái xe sang bằng quốc tế.', content: '<p>Quy trình đổi bằng lái quốc tế.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Top 5 lỗi thường gặp khi thi sa hình', sapo: 'Tổng hợp 5 lỗi phổ biến nhất khiến trượt sa hình.', content: '<p>Top 5 lỗi thi sa hình.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Cách lái xe số tự động cho người mới', sapo: 'Hướng dẫn cơ bản lái xe số tự động cho người mới.', content: '<p>Cách lái xe số tự động.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Học lái xe mùa mưa cần lưu ý gì?', sapo: 'Những điều cần biết khi học lái xe trong mưa.', content: '<p>Học lái xe mùa mưa.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Bí quyết đỗ xe song song dễ dàng', sapo: 'Kỹ thuật đỗ xe song song chuẩn xác.', content: '<p>Đỗ xe song song dễ dàng.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Kỹ năng lái xe đường đèo núi an toàn', sapo: 'Kỹ năng cần thiết khi lái xe trên đường đèo.', content: '<p>Lái xe đường đèo núi.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Chuẩn bị gì trước ngày thi sát hạch?', sapo: 'Checklist chuẩn bị trước ngày thi sát hạch.', content: '<p>Chuẩn bị trước ngày thi.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Kinh nghiệm lái xe ban đêm an toàn', sapo: 'Lưu ý quan trọng giúp lái xe an toàn vào ban đêm.', content: '<p>Lái xe ban đêm an toàn.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Ưu đãi đặc biệt dành cho học viên đăng ký nhóm', sapo: 'Giảm giá khi đăng ký nhóm từ 3 người.', content: '<p>Ưu đãi đăng ký nhóm.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Hướng dẫn bảo dưỡng xe ô tô cơ bản', sapo: 'Kiến thức bảo dưỡng mà mọi tài xế nên biết.', content: '<p>Bảo dưỡng xe ô tô.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Tại sao nên học lái xe tại Tiến Bùi?', sapo: 'Ưu điểm và cam kết chất lượng tại trung tâm Tiến Bùi.', content: '<p>Học lái xe tại Tiến Bùi.</p>', status: true, Created_by: 'admin', is_deleted: false },
+    { title: 'Thời gian học lái xe B2 mất bao lâu?', sapo: 'Giải đáp thời gian đào tạo và lịch học linh hoạt.', content: '<p>Thời gian học lái xe B2.</p>', status: true, Created_by: 'admin', is_deleted: false },
     {
       title: '5 thông tin cần nắm rõ trước khi đăng ký học bằng lái xe ô tô năm 2026',
-      thumbnail_image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop',
       sapo: 'Quy định học và thi bằng lái xe ô tô liên tục được Bộ Giao thông Vận tải cập nhật. Để tránh mất thời gian, chi phí phát sinh và chọn sai hạng bằng, người mới bắt đầu cần nằm lòng những thông tin quan trọng dưới đây.',
       content: `<p>Việc sở hữu một chiếc ô tô cá nhân đang ngày càng trở nên phổ biến tại Việt Nam. Kéo theo đó, nhu cầu học và thi giấy phép lái xe (GPLX) ô tô cũng tăng cao. Tuy nhiên, trước ma trận các trung tâm đào tạo và những thay đổi về luật, nhiều người học tỏ ra lúng túng. Dưới đây là những nội dung trọng tâm bạn cần biết để quá trình học lái xe diễn ra suôn sẻ và hiệu quả.</p>
 
@@ -200,7 +217,6 @@ async function main() {
     },
     {
       title: 'Mẹo vượt qua phần mềm mô phỏng 120 tình huống giao thông (Cập nhật mới nhất 2026)',
-      thumbnail_image: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800&auto=format&fit=crop',
       sapo: 'Thi mô phỏng lái xe là nỗi ám ảnh của nhiều học viên. Bài viết này tổng hợp các bí kíp và phương pháp canh điểm chuẩn xác giúp bạn tự tin đạt điểm tuyệt đối.',
       content: `<p>Từ khi được chính thức áp dụng vào quy trình sát hạch cấp Giấy phép lái xe, phần thi mô phỏng 120 tình huống giao thông đã khiến tỉ lệ trượt của học viên tăng lên đáng kể. Khác với thi lý thuyết có thể học thuộc lòng luật, hay thi thực hành yêu cầu kỹ năng tay chân, phần thi mô phỏng đòi hỏi sự tập trung cao độ, khả năng quan sát nhạy bén và quan trọng nhất là "bấm đúng lúc".</p>
         
@@ -292,24 +308,6 @@ async function main() {
       Created_by: 'admin',
       is_deleted: false
     },
-    { title: 'Hướng dẫn đăng ký thi bằng lái xe B2 online', sapo: 'Hướng dẫn chi tiết cách đăng ký thi bằng lái xe B2 trực tuyến.', content: '<p>Hướng dẫn đăng ký thi bằng lái xe B2 online nhanh chóng.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: '10 mẹo thi lý thuyết lái xe đạt điểm cao', sapo: 'Tổng hợp 10 mẹo giúp vượt qua bài thi lý thuyết dễ dàng.', content: '<p>10 mẹo thi lý thuyết lái xe đạt điểm cao.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Kinh nghiệm thi sa hình B2 đậu ngay lần đầu', sapo: 'Chia sẻ kinh nghiệm từ các học viên đã thi đậu sa hình B2 lần đầu.', content: '<p>Kinh nghiệm thi sa hình B2.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Thay đổi mới trong luật giao thông 2026', sapo: 'Cập nhật các thay đổi quan trọng trong luật giao thông năm 2026.', content: '<p>Thay đổi mới luật giao thông 2026.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'So sánh bằng lái B1 và B2: Nên học hạng nào?', sapo: 'Phân tích ưu nhược điểm giữa B1 và B2.', content: '<p>So sánh B1 và B2.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Chi phí học lái xe B2 năm 2026 là bao nhiêu?', sapo: 'Tổng hợp chi phí học lái xe B2 từ A đến Z.', content: '<p>Chi phí học lái xe B2 năm 2026.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Quy trình đổi bằng lái xe quốc tế', sapo: 'Hướng dẫn quy trình đổi bằng lái xe sang bằng quốc tế.', content: '<p>Quy trình đổi bằng lái quốc tế.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Top 5 lỗi thường gặp khi thi sa hình', sapo: 'Tổng hợp 5 lỗi phổ biến nhất khiến trượt sa hình.', content: '<p>Top 5 lỗi thi sa hình.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Cách lái xe số tự động cho người mới', sapo: 'Hướng dẫn cơ bản lái xe số tự động cho người mới.', content: '<p>Cách lái xe số tự động.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Học lái xe mùa mưa cần lưu ý gì?', sapo: 'Những điều cần biết khi học lái xe trong mưa.', content: '<p>Học lái xe mùa mưa.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Bí quyết đỗ xe song song dễ dàng', sapo: 'Kỹ thuật đỗ xe song song chuẩn xác.', content: '<p>Đỗ xe song song dễ dàng.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Kỹ năng lái xe đường đèo núi an toàn', sapo: 'Kỹ năng cần thiết khi lái xe trên đường đèo.', content: '<p>Lái xe đường đèo núi.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Chuẩn bị gì trước ngày thi sát hạch?', sapo: 'Checklist chuẩn bị trước ngày thi sát hạch.', content: '<p>Chuẩn bị trước ngày thi.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Kinh nghiệm lái xe ban đêm an toàn', sapo: 'Lưu ý quan trọng giúp lái xe an toàn vào ban đêm.', content: '<p>Lái xe ban đêm an toàn.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Ưu đãi đặc biệt dành cho học viên đăng ký nhóm', sapo: 'Giảm giá khi đăng ký nhóm từ 3 người.', content: '<p>Ưu đãi đăng ký nhóm.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Hướng dẫn bảo dưỡng xe ô tô cơ bản', sapo: 'Kiến thức bảo dưỡng mà mọi tài xế nên biết.', content: '<p>Bảo dưỡng xe ô tô.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Tại sao nên học lái xe tại Tiến Bùi?', sapo: 'Ưu điểm và cam kết chất lượng tại trung tâm Tiến Bùi.', content: '<p>Học lái xe tại Tiến Bùi.</p>', status: true, Created_by: 'admin', is_deleted: false },
-    { title: 'Thời gian học lái xe B2 mất bao lâu?', sapo: 'Giải đáp thời gian đào tạo và lịch học linh hoạt.', content: '<p>Thời gian học lái xe B2.</p>', status: true, Created_by: 'admin', is_deleted: false },
   ]
 
   for (const news of newsArticles) {
