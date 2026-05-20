@@ -17,5 +17,5 @@ RUN npx prisma generate
 # Expose API port
 EXPOSE 8080
 
-# Start server
-CMD ["npm", "start"]
+# Wait for DB to be ready before migrate + seed + start
+CMD ["sh", "-c", "echo 'Waiting for database...' && sleep 20 && npx prisma db push && npm run seed && npm start"]
