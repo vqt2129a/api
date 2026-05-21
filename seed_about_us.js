@@ -5,6 +5,7 @@ async function seed() {
   const settings = [
     { setting_key: 'about_text_1', setting_value: 'Tại trung tâm, chúng tôi không chỉ dừng lại ở việc giúp học viên thi đậu lấy bằng mà còn là hành trang kiến thức vững vàng trên mọi nẻo đường.' },
     { setting_key: 'about_text_2', setting_value: 'Với đội ngũ giáo viên trên 10 năm kinh nghiệm, tận tâm, chúng tôi cam kết mang lại trải nghiệm học tập tốt nhất, an toàn và hiệu quả.' },
+    { setting_key: 'about_image', setting_value: '/uploads/about-banner.jpg' },
     { setting_key: 'about_feature_1_title', setting_value: 'Đào tạo chuyên nghiệp' },
     { setting_key: 'about_feature_1_desc', setting_value: 'Giáo trình cập nhật liên tục, thực hành thực tế, đảm bảo tự tin cầm lái.' },
     { setting_key: 'about_feature_2_title', setting_value: 'Hỗ trợ trọn đời' },

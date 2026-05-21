@@ -29,7 +29,7 @@ const upload = multer({
   storage,
   fileFilter,
   limits: {
-    fileSize: 1 * 1024 * 1024 // 1MB cho upload thường
+    fileSize: 10 * 1024 * 1024 // 10MB cho upload thường
   }
 })
 
@@ -50,7 +50,7 @@ const chunkStorage = multer.diskStorage({
 const chunkUpload = multer({
   storage: chunkStorage,
   limits: {
-    fileSize: 1 * 1024 * 1024 // Mỗi chunk tối đa 1MB
+    fileSize: 10 * 1024 * 1024 // Mỗi chunk tối đa 10MB
   }
 })
 

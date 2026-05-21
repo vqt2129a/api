@@ -18,6 +18,7 @@ async function seed() {
   const settings = [
     { setting_key: 'wcu_title', setting_value: 'Vì Sao Hơn 5,000+ Học Viên Chọn Chúng Tôi?' },
     { setting_key: 'wcu_description', setting_value: 'Với triết lý giáo dục đặt sự an toàn và kỹ năng thực tế lên hàng đầu, chúng tôi mang đến môi trường học tập chuyên nghiệp. Cam kết bạn không chỉ có bằng lái, mà còn tự tin làm chủ mọi cung đường.' },
+    { setting_key: 'wcu_image', setting_value: '/uploads/wcu-banner.jpg' },
     { setting_key: 'wcu_stats', setting_value: JSON.stringify(stats) },
     { setting_key: 'wcu_features', setting_value: JSON.stringify(features) }
   ];

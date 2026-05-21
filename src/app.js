@@ -11,8 +11,8 @@ app.use(cors({
   origin: '*', // Sau này thay bằng domain cụ thể
   credentials: true
 }))
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json({ limit: '10mb' }))
+app.use(express.urlencoded({ extended: true, limit: '10mb' }))
 
 // Serve ảnh tĩnh
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')))
@@ -44,7 +44,7 @@ app.use((err, req, res, next) => {
   if (err.code === 'LIMIT_FILE_SIZE') {
     return res.status(400).json({
       success: false,
-      message: 'File quá lớn! Tối đa 5MB.'
+      message: 'Ảnh vượt quá kích thước cho phép (tối đa 10MB)'
     })
   }
 

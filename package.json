@@ -10,7 +10,11 @@
     "prisma:generate": "npx prisma generate",
     "prisma:push": "npx prisma db push",
     "prisma:studio": "npx prisma studio",
-    "seed": "node src/seed.js"
+    "seed": "node src/seed.js",
+    "seed:about": "node seed_about_us.js",
+    "seed:features": "node seed_dynamic_features.js",
+    "seed:wcu": "node seed_wcu.js",
+    "seed:all": "npm run seed && npm run seed:about && npm run seed:features && npm run seed:wcu"
   },
   "dependencies": {
     "@prisma/client": "^6.9.0",
