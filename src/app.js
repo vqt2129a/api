@@ -7,8 +7,10 @@ process.setMaxListeners(20)
 const app = express()
 
 // ===== MIDDLEWARE =====
+const corsOrigins = (process.env.CORS_ORIGINS || 'http://103.90.225.223:5173,http://103.90.225.223:5000').split(',')
+
 app.use(cors({
-  origin: '*', // Sau này thay bằng domain cụ thể
+  origin: corsOrigins,
   credentials: true
 }))
 app.use(express.json({ limit: '10mb' }))
