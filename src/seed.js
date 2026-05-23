@@ -89,6 +89,9 @@ async function main() {
     { setting_key: 'address', setting_value: 'DX70 - Khu Phố 5 - Định Hoà - Thủ Dầu Một - Bình Dương', description: 'Địa chỉ trung tâm' },
     { setting_key: 'email', setting_value: 'hoangban757@gmail.com', description: 'Email liên hệ' },
     { setting_key: 'facebook', setting_value: 'https://www.facebook.com/daotaolaixebinhduong', description: 'Facebook fanpage' },
+    { setting_key: 'facebook_messenger_link', setting_value: 'https://m.me/daotaolaixebinhduong', description: 'Facebook Messenger link' },
+    { setting_key: 'zalo_link', setting_value: 'https://zalo.me/0939360123', description: 'Zalo link' },
+    { setting_key: 'contact_youtube', setting_value: 'https://www.youtube.com/@channel', description: 'YouTube channel' },
     { setting_key: 'google_map', setting_value: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7832.065732838761!2d106.650734!3d11.036161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d1006a5a4dbf%3A0x47b74a110475396e!2zVsSDbiBQaMOybmcgxJDDoG8gVOG6oW4gTMOsaSBYZSBUaOG6p3kgVGnhur9uIELDuWk!5e0!3m2!1svi!2sus!4v1779358771773!5m2!1svi!2sus', description: 'Google Map embed URL' },
   ]
   for (const s of settings) {
