@@ -99,7 +99,7 @@ exports.getById = async (req, res) => {
 // POST tạo mới (Admin)
 exports.create = async (req, res) => {
   try {
-    const { name, description, price, discount_percentage, license_type_id, status } = req.body
+    const { name, description, content, price, discount_percentage, license_type_id, status } = req.body
     const image = req.file ? `/uploads/${req.file.filename}` : null
 
     const course = await prisma.course.create({
@@ -107,6 +107,7 @@ exports.create = async (req, res) => {
         name,
         image,
         description,
+        content: content || null,
         price: price ? parseFloat(price) : null,
         discount_percentage: discount_percentage ? parseInt(discount_percentage) : 0,
         license_type_id: license_type_id ? parseInt(license_type_id) : null,
@@ -123,11 +124,12 @@ exports.create = async (req, res) => {
 // PUT cập nhật (Admin)
 exports.update = async (req, res) => {
   try {
-    const { name, description, price, discount_percentage, license_type_id, status } = req.body
+    const { name, description, content, price, discount_percentage, license_type_id, status } = req.body
     const data = { Modify_by: req.user?.username || null }
 
     if (name !== undefined) data.name = name
     if (description !== undefined) data.description = description
+    if (content !== undefined) data.content = content || null
     if (price !== undefined) data.price = parseFloat(price)
     if (discount_percentage !== undefined) data.discount_percentage = parseInt(discount_percentage)
     if (license_type_id !== undefined) data.license_type_id = license_type_id ? parseInt(license_type_id) : null
