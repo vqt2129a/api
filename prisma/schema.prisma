@@ -150,6 +150,22 @@ model Banner {
   @@map("banner")
 }
 
+// ===== BẢNG WCU_IMAGES (Ảnh carousel "Vì sao chọn chúng tôi") =====
+model WcuImage {
+  id            Int       @id @default(autoincrement())
+  title         String?   @db.NVarChar(100)
+  image_url     String?   @db.VarChar(255)
+  display_order Int       @default(0)
+  status        Boolean   @default(true)
+  Created_time  DateTime  @default(now())
+  Created_by    String?   @db.NVarChar(255)
+  Modify_time   DateTime? @updatedAt
+  Modify_by     String?   @db.NVarChar(255)
+  is_deleted    Boolean   @default(false)
+
+  @@map("wcu_images")
+}
+
 // ===== BẢNG STUDENTS (Học viên - tài khoản & thông tin cá nhân) =====
 model Student {
   id              Int       @id @default(autoincrement())

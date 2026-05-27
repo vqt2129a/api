@@ -6,7 +6,7 @@ const path = require('path')
 exports.getAll = async (req, res) => {
   try {
     const page = req.query.page ? parseInt(req.query.page) : null
-    const limit = req.query.limit ? parseInt(req.query.limit) : 6
+    const limit = req.query.limit ? parseInt(req.query.limit) : 8
 
     if (page) {
       const skip = (page - 1) * limit
@@ -42,7 +42,7 @@ exports.getAll = async (req, res) => {
 exports.getAllAdmin = async (req, res) => {
   try {
     const page = req.query.page ? parseInt(req.query.page) : null
-    const limit = req.query.limit ? parseInt(req.query.limit) : 6
+    const limit = req.query.limit ? parseInt(req.query.limit) : 8
 
     if (page) {
       const skip = (page - 1) * limit
